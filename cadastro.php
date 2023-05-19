@@ -1,5 +1,5 @@
 <?php
-require_once 'CLASSES/usuarios.php';
+require_once 'classes/usuarios.php';
 $u = new Usuario;
 ?>
 
@@ -37,7 +37,7 @@ $u = new Usuario;
         $confirmarSenha = addslashes($_POST['confSenha']);
         //verificar se esta preenchido
         if (!empty($nome) && !empty($telefone) && !empty($email) && !empty($senha) && !empty($confirmarSenha)) {
-            $u->conectar("projeto_login", "localhost", "root", "");
+                        $u->conectar("id20775902_projeto_login", "localhost", "id20775902_bufdofu", "Ba8e9b123.");
             if ($u->msgErro == "") //esta tudo ok
             {
                 if ($senha == $confirmarSenha) {

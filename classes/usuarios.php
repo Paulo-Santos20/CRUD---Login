@@ -28,7 +28,7 @@ class Usuario
             $sql->bindValue(":n", $nome);
             $sql->bindValue(":t", $telefone);
             $sql->bindValue(":e", $email);
-            $sql->bindValue(":s", md5($senha));//m5= senha encriptada em hash, muito antigo porém fácil 
+            $sql->bindValue(":s", ($senha));//m5= senha encriptada em hash, muito antigo porém fácil 
             $sql->execute();
             return true; //tudo ok
         }
@@ -39,7 +39,7 @@ class Usuario
         //verifica se o email e senha estao cadastrados, se sim
         $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha= :s");
         $sql->bindValue(":e", $email);
-        $sql->bindValue(":s", md5($senha));
+        $sql->bindValue(":s", ($senha));
         $sql->execute();
         if ($sql->rowCount() > 0) {
             //entrar no sistema (sessao)
