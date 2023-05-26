@@ -32,7 +32,7 @@ $u = new Usuario;
             $u->conectar("id20775902_projeto_login", "localhost", "id20775902_bufdofu", "Ba8e9b123.");
             if ($u->msgErro == "") {
                 if ($u->logar($email, $senha)) {
-                    header("location:AreaPrivada.php");
+                    header("location: AreaPrivada.php");
                 } else {
     ?>
                     <div class="msg-erro">

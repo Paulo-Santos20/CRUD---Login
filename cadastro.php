@@ -37,14 +37,14 @@ $u = new Usuario;
         $confirmarSenha = addslashes($_POST['confSenha']);
         //verificar se esta preenchido
         if (!empty($nome) && !empty($telefone) && !empty($email) && !empty($senha) && !empty($confirmarSenha)) {
-                        $u->conectar("id20775902_projeto_login", "localhost", "id20775902_bufdofu", "Ba8e9b123.");
+            $u->conectar("id20775902_projeto_login", "localhost", "id20775902_bufdofu", "Ba8e9b123.");
             if ($u->msgErro == "") //esta tudo ok
             {
                 if ($senha == $confirmarSenha) {
                     if ($u->cadastrar($nome, $telefone, $email, $senha)) {
     ?>
                         <div id="msg-sucesso">
-                            <a href="index.php"><strong>Cadastrado com sucesso! Acesse para entrar! </strong> </a>
+                            <a href="index.php"><strong>Cadastrado com sucesso! Clique aqui para acessar! </strong> </a>
                         </div>
                     <?php
                     } else {
